@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JS</title>
+</head>
+<body>
+<script>
+    let apple = 10;
+    console.log('apple = ' + apple);
+    alert('apple = ' + apple);
+    let condition = Math.floor(Math.random() * 21) - 10;
+    console.log('Good game is ' + condition);
+
+    let num = 5;
+    let strnum = '100';
+    let what = true;
+    console.log('num = ' + num);
+    console.log('strnum = ' + strnum);
+    console.log('what = ' + what);
+    console.log('Wow, watch this -> num + strnum = ' + (num + strnum));
+    console.log('Wow, watch this -> num + what = ' + (num + what));
+    console.log('Wow, watch this -> strnum + what = ' + (strnum + what));
+
+    let array = [];
+    for(let i = 0; i < 10; i++){
+        array[i] = Math.floor(Math.random() * 21) - 10;
+    }
+    console.log(array);
+
+    console.log('Sort Array');
+    let res = array.filter(function(elem) {
+	    if (elem >= 0) {
+	    	return true;
+	    }
+	    else {
+	    	return false;
+	    }
+	 });
+	 console.log(res);
+
+	 function Lab6()
+	 {
+	    let out1 = Math.floor(Math.random() * 21) - 10;
+	    return out1;
+	 }
+	 console.log('Function = ' + Lab6());
+
+    console.log('Array * 2 = ');
+	 let n = 2;
+	 function Lab62 (array, n) {
+	    array = array.map(element =>{
+    	    return element * n;
+	    });
+	    return array;
+	 }
+	 console.log(Lab62(array, n));
+
+    let anon = function (){ return Math.floor(Math.random() * 21) - 10; }
+    console.log('Anonimus var = ' + anon());
+
+    for(let i = 0; i < 10;i++)
+    {
+        let alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+        let randomIndex = Math.floor(Math.random() * alphabet.length);
+        let randomLetter = alphabet[randomIndex];
+        console.log(randomLetter);
+    }
+
+    let people = {
+        name: "Алех",
+        surname: "Булавка",
+        year: 2004,
+        hobbi: "Програместик",
+        age:19,
+        getFIO(){
+            alert(this.name + " " + this.surname);
+        },
+        getYear(){
+            alert(this.year);
+        },
+        getHobbi(){
+            alert(this.hobbi);
+        },
+        getAge(){
+            alert(this.age);
+        },
+        getInfo(){
+            alert(this.name + " " + this.surname + " " + this.year + " " + this.hobbi + " " + this.age);
+        }
+    }
+    people.getInfo();
+
+    
+    let job = {
+        "Alex": 1,
+        "Oleg": 400000,
+        "Serj": 15,
+        "OJbudda": 25000,
+        getCacl(){
+            let totalSalary = 0;
+            for (let i in this) {
+                if(typeof this[i] === "number")
+                    totalSalary += job[i];
+            }
+            alert(totalSalary);
+        }
+    }
+    job.getCacl();
+
+</script>
+</body>
+</html>
