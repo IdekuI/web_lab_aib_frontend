@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>JS7</title>
+</head>
+
+<body>
+<script>
+    //1
+    let variable1 = prompt('var one');  let variable2 = prompt('var two');
+    if (variable1 === variable2) console.log('equally')
+    else console.log('unequally');
+
+    //2
+    let fructs = {
+        'apple': 'green',
+        'strawberry': 'red',
+        'blueberry': 'blue',
+        'raspberry': 'light red',
+        'lemon': 'yellow'
+    }
+    for(let elem in fructs){
+        console.log(elem);
+    }
+    for(let elem in fructs){
+        console.log(elem + ' ' + fructs[elem]);
+    }
+
+    //3
+    let countOfStaff=prompt('Введите кол-во человек ', undefined);
+    if (!isNaN(parseFloat(countOfStaff))){
+        countOfStaff=parseFloat(countOfStaff)
+    }else{countOfStaff = 0;}
+
+    while(countOfStaff === 0){ 
+        let countOfStaff=prompt('Введите кол-во человек ', undefined);
+        if (!isNaN(parseFloat(countOfStaff))) {
+            countOfStaff = parseFloat(countOfStaff)} 
+        else {countOfStaff = 0;}
+    }
+
+    let salaryOfStaff=prompt('Введите зарплату на человека ', undefined);
+    if (!isNaN(parseFloat(salaryOfStaff))){
+        salaryOfStaff=parseFloat(salaryOfStaff);} 
+        else {salaryOfStaff=0;}
+    while(countOfStaff === 0) {
+        let salaryOfStaff = prompt('Введите зарплату на человека ', undefined);
+        if (!isNaN(parseFloat(salaryOfStaff))) {
+            salaryOfStaff = parseFloat(salaryOfStaff)
+        } 
+        else {salaryOfStaff = 0;}
+    }
+    alert('Затраты на ЗП -> ' + countOfStaff*salaryOfStaff);
+
+    //4
+    const studentsClass = [
+    {Name:'Петров А.А.',mark:5},
+    {Name:'Иванов Б.Б.',mark:3.4},
+    {Name:'Сидоров Г.Г.',mark:9},
+    {Name:'Немолодой Д.Д',mark:2},
+    {Name:'Молодой Е.Е',mark:3.4}
+    ];
+
+    let sumOfmark = 0;
+    let countOfStudent = 0;
+    let ploxieStudenti = [];
+
+    studentsClass.forEach((student)=>{
+        if(student.mark > 5 || student.mark < 0){
+            console.log(`${student.mark} - Это значение учитываться не будет оно не соответствует допустимым значениям`);
+            return;
+        }
+        if(student.mark < 4) ploxieStudenti.push(student);
+        sumOfmark += student.mark;
+        countOfStudent++;
+    });
+
+    let avgemark = sumOfmark/countOfStudent;
+    console.log(`Средняя оценка: ${avgemark}`);
+    console.log('Плохие студенты:');
+    if(ploxieStudenti.length === 0 ) console.log('Таких нет');
+    else console.log(ploxieStudenti);
+
+</script>
+</body>
+</html>
