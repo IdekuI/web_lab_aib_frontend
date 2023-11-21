@@ -1,0 +1,27 @@
+.Gen
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+label
+{
+    padding-top: 15px;
+    display: inline-block;
+    width: 100px;
+    font-size: 16px; 
+    font-family: Arial;
+}
+
+.inputs
+{
+    text-align: left;
+    width: 200px;
+}
+
+.color_win
+{
+    width: 200px;
+    height: 200px;
+}
+

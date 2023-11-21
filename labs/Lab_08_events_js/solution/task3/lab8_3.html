@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="lab8_3.css"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>lab8_3</title>
+</head>
+
+<body>
+    <div class="List">
+        <div class="inner-list"></div>
+    </div>
+
+    <div class = "Check">
+        <div class = "inputs">
+            <label for = "inputRed">Red</label>
+            <input class = "inputRed" type = "number", id = "inputRed" name = "inputRed" max = "255" min = "0">
+            <label for = "inputGreen">Green</label>
+            <input class = "inputGreen" type = "number", id = "inputGreen" name = "GREEN" max = "255" min = "0">
+            <label for = "inputBlue">Blue</label>
+            <input class = "inputBlue" type = "number", id = "inputGreen" name = "BLUE" max = "255" min = "0">
+        </div>
+
+        <div class = "color_win"></div>
+    </div>
+
+    <div class="divbutton">
+        <button class="getcolorbutton" type="button" onclick="Create()">Сгенерировать</button>
+    </div>
+    <script src = "lab8_3.js"></script>
+</body>

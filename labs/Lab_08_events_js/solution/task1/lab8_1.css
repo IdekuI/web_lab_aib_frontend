@@ -1,0 +1,17 @@
+.butdiv
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+button
+{
+    width: 200px;
+    font-size: 20px;
+    align-items: center;
+    margin-top: 10px;
+    background-color: burlywood;
+    color: white;
+    border-radius: 30px;
+    border-color: brown;
+}
