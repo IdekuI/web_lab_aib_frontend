@@ -1,12 +1,6 @@
-html {
-    height: 100%;
-}
-
 body {
-    display: flex;
-    justify-content: flex-start;
     height: 100%;
-    margin: 0;
+    margin-left: 8px;
     background-color: #ffffff;
 }
 
